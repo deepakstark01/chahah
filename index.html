@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Chahah - Tea & Coffee House</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+</head>
+<body class="bg-white">
+    <!-- Header Section -->
+    <header class="bg-black text-white fixed w-full z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <!-- Logo -->
+                    <div class="w-10 h-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                            <!-- Background Circle -->
+                            <circle cx="150" cy="150" r="145" fill="#FDF2E9" stroke="#8B4513" stroke-width="2"/>
+                            
+                            <!-- Coffee Cup -->
+                            <path d="M100 140 L200 140 C220 140 230 160 220 180 L190 220 C185 228 175 230 165 230 L135 230 C125 230 115 228 110 220 L80 180 C70 160 80 140 100 140" 
+                                  fill="#8B4513" />
+                            
+                            <!-- Cup Handle -->
+                            <path d="M200 160 C240 160 240 190 200 190" 
+                                  fill="none" 
+                                  stroke="#8B4513" 
+                                  stroke-width="12"
+                                  stroke-linecap="round"/>
+                            
+                            <!-- Steam Swirls -->
+                            <path d="M130 80 C140 70 150 90 140 100" 
+                                  fill="none" 
+                                  stroke="#8B4513" 
+                                  stroke-width="6"
+                                  stroke-linecap="round"/>
+                            <path d="M150 70 C160 60 170 80 160 90" 
+                                  fill="none" 
+                                  stroke="#8B4513" 
+                                  stroke-width="6"
+                                  stroke-linecap="round"/>
+                            <path d="M170 80 C180 70 190 90 180 100" 
+                                  fill="none" 
+                                  stroke="#8B4513" 
+                                  stroke-width="6"
+                                  stroke-linecap="round"/>
+                                  
+                            <!-- Text -->
+                            <text x="150" y="280" 
+                                  font-family="Arial, sans-serif" 
+                                  font-size="32" 
+                                  font-weight="bold" 
+                                  text-anchor="middle" 
+                                  fill="#8B4513">CHAHAH</text>
+                            
+                            <!-- Tea Leaf Accent -->
+                            <path d="M140 120 C160 110 180 130 160 140 C140 150 120 130 140 120" 
+                                  fill="#2E7D32"/>
+                          </svg>
+                    </div>
+                    <span class="text-2xl font-bold text-white">Chahah</span>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 text-lg font-medium">
+                    <a href="#home" class="hover:text-gray-300 transition-colors duration-200">Home</a>
+                    <a href="#menu" class="hover:text-gray-300 transition-colors duration-200">Menu</a>
+                    <a href="#about" class="hover:text-gray-300 transition-colors duration-200">About</a>
+                    <a href="#contact" class="hover:text-gray-300 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center">
+                <!-- Hero Logo -->
+                <div class="w-48 h-48 mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                        <!-- Background Circle -->
+                        <circle cx="150" cy="150" r="145" fill="#FDF2E9" stroke="#8B4513" stroke-width="2"/>
+                        
+                        <!-- Coffee Cup -->
+                        <path d="M100 140 L200 140 C220 140 230 160 220 180 L190 220 C185 228 175 230 165 230 L135 230 C125 230 115 228 110 220 L80 180 C70 160 80 140 100 140" 
+                              fill="#8B4513" />
+                        
+                        <!-- Cup Handle -->
+                        <path d="M200 160 C240 160 240 190 200 190" 
+                              fill="none" 
+                              stroke="#8B4513" 
+                              stroke-width="12"
+                              stroke-linecap="round"/>
+                        
+                        <!-- Steam Swirls -->
+                        <path d="M130 80 C140 70 150 90 140 100" 
+                              fill="none" 
+                              stroke="#8B4513" 
+                              stroke-width="6"
+                              stroke-linecap="round"/>
+                        <path d="M150 70 C160 60 170 80 160 90" 
+                              fill="none" 
+                              stroke="#8B4513" 
+                              stroke-width="6"
+                              stroke-linecap="round"/>
+                        <path d="M170 80 C180 70 190 90 180 100" 
+                              fill="none" 
+                              stroke="#8B4513" 
+                              stroke-width="6"
+                              stroke-linecap="round"/>
+                              
+                        <!-- Text -->
+                        <text x="150" y="280" 
+                              font-family="Arial, sans-serif" 
+                              font-size="32" 
+                              font-weight="bold" 
+                              text-anchor="middle" 
+                              fill="#8B4513">CHAHAH</text>
+                        
+                        <!-- Tea Leaf Accent -->
+                        <path d="M140 120 C160 110 180 130 160 140 C140 150 120 130 140 120" 
+                              fill="#2E7D32"/>
+                      </svg>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-black mb-4">Welcome to Chahah</h1>
+                <p class="text-xl text-gray-600 max-w-2xl">Experience the perfect blend of tradition and taste with our premium tea, coffee, and delightful ice cream selections.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Menu</h2>
+            <p class="text-center text-gray-500 mb-8">Discover our handcrafted beverages and delicious food</p>
+    
+            <!-- Search Bar -->
+            <div class="max-w-xl mx-auto mb-8">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search our menu..." 
+                        class="w-full px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 shadow-sm"
+                        oninput="searchMenu(this.value)"
+                    >
+                    <span class="absolute right-4 top-3">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+    
+            <!-- Category Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="showCategory('coffee')" class="category-btn px-6 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition">Coffee</button>
+                <button onclick="showCategory('tea')" class="category-btn px-6 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition">Tea</button>
+                <button onclick="showCategory('chinese')" class="category-btn px-6 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition">Chinese</button>
+                <button onclick="showCategory('beverages')" class="category-btn px-6 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition">Beverages</button>
+                <button onclick="showCategory('iceCream')" class="category-btn px-6 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition">Ice Cream</button>
+            </div>
+    
+            <!-- Menu Section -->
+            <div class="menu-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Items will be dynamically rendered here -->
+            </div>
+        </div>
+    
+        <script>
+        const menuData = {
+    coffee: [
+        {
+            name: "Espresso",
+            description: "Rich, bold single shot",
+            price: "$3.50",
+            rating: "★★★★★",
+            reviews: 124,
+            tags: ["Signature", "Popular"],
+            category: "coffee",
+            image: "tea.jpg"
+        },
+        {
+            name: "Americano",
+            description: "Espresso diluted with hot water",
+            price: "$3.00",
+            rating: "★★★★☆",
+            reviews: 98,
+            tags: ["Classic", "Low-Calorie"],
+            category: "coffee",
+            image: "https://via.placeholder.com/150/americano"
+        },
+        {
+            name: "Latte",
+            description: "Espresso with steamed milk and light foam",
+            price: "$4.00",
+            rating: "★★★★★",
+            reviews: 152,
+            tags: ["Creamy", "Popular"],
+            category: "coffee",
+            image: "https://via.placeholder.com/150/latte"
+        },
+        {
+            name: "Cappuccino",
+            description: "Equal parts espresso, steamed milk, and foam",
+            price: "$4.25",
+            rating: "★★★★☆",
+            reviews: 134,
+            tags: ["Bestseller", "Creamy"],
+            category: "coffee",
+            image: "https://via.placeholder.com/150/cappuccino"
+        },
+        {
+            name: "Mocha",
+            description: "Chocolate-flavored variant of latte",
+            price: "$4.75",
+            rating: "★★★★★",
+            reviews: 160,
+            tags: ["Chocolate", "Sweet"],
+            category: "coffee",
+            image: "https://via.placeholder.com/150/mocha"
+        },
+        {
+            name: "Flat White",
+            description: "Smooth blend of espresso and steamed milk",
+            price: "$4.50",
+            rating: "★★★★☆",
+            reviews: 89,
+            tags: ["Smooth", "Popular"],
+            category: "coffee",
+            image: "https://via.placeholder.com/150/flat-white"
+        }
+    ],
+    tea: [
+        {
+            name: "Green Tea",
+            description: "Refreshing and healthy green tea",
+            price: "$3.00",
+            rating: "★★★★☆",
+            reviews: 80,
+            tags: ["Organic", "Low-Calorie"],
+            category: "tea",
+            image: "tea.jpg"
+        },
+        {
+            name: "Masala Chai",
+            description: "Traditional Indian spiced tea with milk",
+            price: "$3.50",
+            rating: "★★★★★",
+            reviews: 95,
+            tags: ["Spicy", "Popular"],
+            category: "tea",
+            image: "tea.jpg"
+        },
+        {
+            name: "Chamomile",
+            description: "Calming chamomile flower tea",
+            price: "$3.25",
+            rating: "★★★★☆",
+            reviews: 60,
+            tags: ["Calming", "Herbal"],
+            category: "tea",
+            image: "https://via.placeholder.com/150/chamomile"
+        },
+        {
+            name: "Black Tea",
+            description: "Classic black tea with bold flavor",
+            price: "$2.75",
+            rating: "★★★★☆",
+            reviews: 100,
+            tags: ["Classic", "Bold"],
+            category: "tea",
+            image: "https://via.placeholder.com/150/black-tea"
+        },
+        {
+            name: "Jasmine Tea",
+            description: "Fragrant green tea with jasmine flowers",
+            price: "$3.25",
+            rating: "★★★★★",
+            reviews: 78,
+            tags: ["Floral", "Organic"],
+            category: "tea",
+            image: "https://via.placeholder.com/150/jasmine-tea"
+        },
+        {
+            name: "Matcha Latte",
+            description: "Japanese matcha green tea with milk",
+            price: "$4.00",
+            rating: "★★★★★",
+            reviews: 112,
+            tags: ["Matcha", "Creamy"],
+            category: "tea",
+            image: "https://via.placeholder.com/150/matcha-latte"
+        }
+    ],
+    chinese: [
+        {
+            name: "Spring Rolls",
+            description: "Crispy rolls with vegetable filling",
+            price: "$5.99",
+            rating: "★★★★★",
+            reviews: 130,
+            tags: ["Appetizer", "Crispy"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/spring-rolls"
+        },
+        {
+            name: "Kung Pao Chicken",
+            description: "Spicy stir-fried chicken with peanuts",
+            price: "$9.99",
+            rating: "★★★★☆",
+            reviews: 200,
+            tags: ["Spicy", "Popular"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/kung-pao-chicken"
+        },
+        {
+            name: "Sweet and Sour Pork",
+            description: "Pork in sweet and tangy sauce",
+            price: "$10.99",
+            rating: "★★★★★",
+            reviews: 145,
+            tags: ["Sweet", "Savory"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/sweet-sour-pork"
+        },
+        {
+            name: "Fried Rice",
+            description: "Rice stir-fried with vegetables and egg",
+            price: "$7.99",
+            rating: "★★★★☆",
+            reviews: 250,
+            tags: ["Classic", "Vegetarian"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/fried-rice"
+        },
+        {
+            name: "Dim Sum",
+            description: "Assorted dumplings with various fillings",
+            price: "$12.99",
+            rating: "★★★★★",
+            reviews: 95,
+            tags: ["Traditional", "Popular"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/dim-sum"
+        },
+        {
+            name: "Beef and Broccoli",
+            description: "Sautéed beef with fresh broccoli",
+            price: "$11.50",
+            rating: "★★★★☆",
+            reviews: 89,
+            tags: ["Savory", "Popular"],
+            category: "chinese",
+            image: "https://via.placeholder.com/150/beef-broccoli"
+        }
+    ],
+    beverages: [
+        {
+            name: "Lemonade",
+            description: "Refreshing lemonade with fresh lemons",
+            price: "$2.99",
+            rating: "★★★★☆",
+            reviews: 120,
+            tags: ["Refreshing", "Summer"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/lemonade"
+        },
+        {
+            name: "Iced Tea",
+            description: "Chilled black tea with lemon",
+            price: "$3.25",
+            rating: "★★★★☆",
+            reviews: 90,
+            tags: ["Iced", "Popular"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/iced-tea"
+        },
+        {
+            name: "Mango Smoothie",
+            description: "Blended mango with yogurt",
+            price: "$4.99",
+            rating: "★★★★★",
+            reviews: 140,
+            tags: ["Seasonal", "Popular"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/mango-smoothie"
+        },
+        {
+            name: "Cold Brew Coffee",
+            description: "Smooth cold brew coffee",
+            price: "$3.75",
+            rating: "★★★★☆",
+            reviews: 110,
+            tags: ["Cold", "Popular"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/cold-brew"
+        },
+        {
+            name: "Virgin Mojito",
+            description: "Mocktail with mint and lime",
+            price: "$3.99",
+            rating: "★★★★★",
+            reviews: 88,
+            tags: ["Bestseller", "Refreshing"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/virgin-mojito"
+        },
+        {
+            name: "Strawberry Shake",
+            description: "Creamy shake with fresh strawberries",
+            price: "$4.50",
+            rating: "★★★★☆",
+            reviews: 95,
+            tags: ["Sweet", "Creamy"],
+            category: "beverages",
+            image: "https://via.placeholder.com/150/strawberry-shake"
+        }
+    ],
+    iceCream: [
+        {
+            name: "Vanilla Bean",
+            description: "Classic vanilla with real bean specks",
+            price: "$2.50",
+            rating: "★★★★☆",
+            reviews: 100,
+            tags: ["Classic", "Popular"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/vanilla-bean"
+        },
+        {
+            name: "Chocolate Fudge",
+            description: "Rich chocolate with fudge swirls",
+            price: "$3.00",
+            rating: "★★★★★",
+            reviews: 85,
+            tags: ["Chocolate Lover"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/chocolate-fudge"
+        },
+        {
+            name: "Strawberry Delight",
+            description: "Sweet strawberry ice cream",
+            price: "$3.25",
+            rating: "★★★★★",
+            reviews: 112,
+            tags: ["Berry", "Sweet"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/strawberry-delight"
+        },
+        {
+            name: "Mint Chocolate Chip",
+            description: "Mint ice cream with chocolate chunks",
+            price: "$3.50",
+            rating: "★★★★☆",
+            reviews: 98,
+            tags: ["Minty", "Popular"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/mint-chocolate-chip"
+        },
+        {
+            name: "Cookies and Cream",
+            description: "Vanilla ice cream with cookie bits",
+            price: "$3.25",
+            rating: "★★★★★",
+            reviews: 125,
+            tags: ["Cookies", "Popular"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/cookies-and-cream"
+        },
+        {
+            name: "Salted Caramel",
+            description: "Caramel ice cream with a hint of salt",
+            price: "$3.75",
+            rating: "★★★★★",
+            reviews: 110,
+            tags: ["Caramel", "Sweet"],
+            category: "iceCream",
+            image: "https://via.placeholder.com/150/salted-caramel"
+        }
+    ]
+};
+
+    
+        function searchMenu(searchTerm) {
+            const menuContainer = document.querySelector('.menu-container');
+            menuContainer.innerHTML = '';
+    
+            if (!searchTerm) {
+                showCategory('coffee');
+                return;
+            }
+    
+            const searchResults = Object.values(menuData)
+                .flat()
+                .filter(item => 
+                    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+                );
+    
+            if (searchResults.length === 0) {
+                menuContainer.innerHTML = `
+                    <div class="col-span-full text-center py-8">
+                        <p class="text-gray-500 text-lg">No items found matching "${searchTerm}"</p>
+                    </div>
+                `;
+                return;
+            }
+    
+            renderMenuItems(searchResults);
+        }
+    
+        function showCategory(category) {
+            document.querySelector('.menu-container').innerHTML = '';
+            renderMenuItems(menuData[category]);
+        }
+    
+        function renderMenuItems(items) {
+            const menuContainer = document.querySelector('.menu-container');
+            
+            items.forEach(item => {
+                menuContainer.innerHTML += `
+                    <div class="bg-white shadow-lg p-6 rounded-xl border border-gray-300 hover:border-gray-500 transition-all duration-300 hover:shadow-xl">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-32 object-cover rounded-t-lg mb-4">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">${item.name}</h3>
+                            <span class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm">${item.price}</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">${item.description}</p>
+                        <div class="flex items-center mb-3">
+                            <span class="text-yellow-500">${item.rating}</span>
+                            <span class="text-gray-500 text-xs ml-2">(${item.reviews} reviews)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${item.tags.map(tag => `
+                                <span class="px-2 py-1 bg-gray-800 text-xs rounded-full text-white">${tag}</span>
+                            `).join('')}
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gray-800 text-white rounded-full font-bold hover:bg-gray-600 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                            Add to Order
+                        </button>
+                    </div>
+                `;
+            });
+        }
+    
+        // Show default category on load
+        showCategory('coffee');
+        </script>
+    
+        <style>
+        #menu {
+            background: repeating-linear-gradient(
+                to right,
+                #f0f0f0,
+                #f0f0f0 1px,
+                transparent 1px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                to bottom,
+                #f0f0f0,
+                #f0f0f0 1px,
+                transparent 1px,
+                transparent 20px
+            );
+        }
+    
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+    
+        .category-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .menu-container > div {
+            transition: all 0.3s ease;
+        }
+    
+        .menu-container > div:hover {
+            transform: translateY(-5px);
+        }
+        </style>
+    </section>
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6 text-black">Our Story</h2>
+                <p class="text-gray-600 mb-8">
+                    At Chahah, we believe in creating memorable moments through perfect brews and sweet treats. 
+                    Our passion for quality beverages and desserts brings people together in a warm, welcoming atmosphere.
+                </p>
+                <img src="food.jpg" alt="Chahah Interior" class="rounded-lg shadow-xl mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-black">Visit Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-black">Hours</h3>
+                        <p class="text-gray-600">Monday - Friday: 7:00 AM - 9:00 PM</p>
+                        <p class="text-gray-600">Saturday - Sunday: 8:00 AM - 10:00 PM</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-black">Location</h3>
+                        <p class="text-gray-600">123 Coffee Street</p>
+                        <p class="text-gray-600">Chai Town, CT 12345</p>
+                        <p class="text-gray-600">Phone: (123) 456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Chahah. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
